@@ -1,0 +1,106 @@
+﻿@model aspProjekt8.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Szczegóły</h2>
+
+<div>
+    <h4>Car</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.klient.ImieNazwiskoKlienta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.klient.ImieNazwiskoKlienta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.worker.ImieNazwiskoPracownika)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.worker.ImieNazwiskoPracownika)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rocznik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rocznik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Silnik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Silnik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skrzynia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skrzynia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Moc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pojemność)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pojemność)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Przebieg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Przebieg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DodatkoweInformacje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DodatkoweInformacje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoOddania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoOddania)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

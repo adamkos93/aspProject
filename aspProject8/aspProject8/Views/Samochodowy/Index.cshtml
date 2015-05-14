@@ -1,0 +1,100 @@
+﻿@model IEnumerable<aspProjekt8.Models.Car>
+
+@{
+    ViewBag.Title = "Samochody";
+}
+
+<h2>Samochody</h2>
+
+<p>
+    @Html.ActionLink("Nowy Samochód", "Create")
+</p>
+@using (Html.BeginForm())
+{
+    <p>
+        Wyszukaj po modelu: @Html.TextBox("SearchString")
+        <input type="submit" value="Wyszukaj" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.klient.ImieNazwiskoKlienta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.worker.ImieNazwiskoPracownika)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rocznik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Silnik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skrzynia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Moc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pojemność)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Przebieg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DodatkoweInformacje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoOddania)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.klient.ImieNazwiskoKlienta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.worker.ImieNazwiskoPracownika)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rocznik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Silnik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Skrzynia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pojemność)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Przebieg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DodatkoweInformacje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoOddania)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

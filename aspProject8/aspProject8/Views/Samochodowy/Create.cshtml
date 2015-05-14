@@ -1,0 +1,121 @@
+﻿@model aspProjekt8.Models.Car
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Car</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Model, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Model)
+                @Html.ValidationMessageFor(model => model.Model)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Rocznik, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Rocznik)
+                @Html.ValidationMessageFor(model => model.Rocznik)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Silnik, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Silnik)
+                @Html.ValidationMessageFor(model => model.Silnik)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Skrzynia, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Skrzynia)
+                @Html.ValidationMessageFor(model => model.Skrzynia)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Moc, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Moc)
+                @Html.ValidationMessageFor(model => model.Moc)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Pojemność, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Pojemność)
+                @Html.ValidationMessageFor(model => model.Pojemność)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Przebieg, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Przebieg)
+                @Html.ValidationMessageFor(model => model.Przebieg)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DodatkoweInformacje, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DodatkoweInformacje)
+                @Html.ValidationMessageFor(model => model.DodatkoweInformacje)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DoOddania, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DoOddania)
+                @Html.ValidationMessageFor(model => model.DoOddania)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WorkerID, "WorkerID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("WorkerID", String.Empty)
+                @Html.ValidationMessageFor(model => model.WorkerID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.KlientID, "KlientID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("KlientID", String.Empty)
+                @Html.ValidationMessageFor(model => model.KlientID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
